@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/igs_schuelerfirma_bestellungen/ByteFormat/ByteFormat.csproj",
-      "projectName": "ByteFormat",
-      "projectPath": "/home/igs_schuelerfirma_bestellungen/ByteFormat/ByteFormat.csproj",
+      "projectUniqueName": "/home/igs_schuelerfirma_bestellungen/ByteFormat/ByteFormat.Core.csproj",
+      "projectName": "ByteFormat.Core",
+      "projectPath": "/home/igs_schuelerfirma_bestellungen/ByteFormat/ByteFormat.Core.csproj",
       "packagesPath": "/home/igs_schuelerfirma_bestellungen/.nuget/packages/",
       "outputPath": "/home/igs_schuelerfirma_bestellungen/ByteFormat/obj/",
       "projectStyle": "PackageReference",

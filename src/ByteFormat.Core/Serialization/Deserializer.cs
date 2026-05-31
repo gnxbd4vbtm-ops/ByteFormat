@@ -4,6 +4,6 @@ public class Deserializer
 {
     public object Deserialize(string input)
     {
-        return null;
+        throw new NotImplementedException();
     }
 }

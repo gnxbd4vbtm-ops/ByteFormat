@@ -2,18 +2,19 @@ namespace ByteFormat.Core.Lexer;
 
 public enum TokenType
 {
-    LeftBracket,   // [
-    RightBracket,  // ]
-    LeftBrace,     // {
-    RightBrace,    // }
-    LeftParen,     // (
-    RightParen,    // )
-
-    Identifier,
-    Number,
-    String,
-    Boolean,
+    LBracket,
+    RBracket,
+    LBrace,
+    RBrace,
+    LParen,
+    RParen,
 
     Colon,
+
+    Identifier,
+    String,
+    Number,
+    Boolean,
+
     EOF
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A+FwU7Qm8mulhJ024/7XCL08krXgozJpccxM2tRdGsBx9YlS0zRPTWflYm3TFLWNeY9Zs06dDbNeKhir93nvAg==",
+  "dgSpecHash": "uOSFuh+GEW4aI2eeaARV6SttPNEtSgKnBSGd51GEtw6jI2eb+2X332G14C+WQyfy0V2+Ykc7vuxpEUzwlawlrA==",
   "success": true,
-  "projectFilePath": "/home/igs_schuelerfirma_bestellungen/ByteFormat/ByteFormat.csproj",
+  "projectFilePath": "/home/igs_schuelerfirma_bestellungen/ByteFormat/ByteFormat.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
