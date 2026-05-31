@@ -1,0 +1,44 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+packages/
+
+# Environment files
+.env
+
+# Test results
+TestResults/
+Test/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Generated files
+*.g.cs
+*.g.i.cs
+
