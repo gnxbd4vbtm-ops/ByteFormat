@@ -42,3 +42,5 @@ coverage/
 *.g.cs
 *.g.i.cs
 
+# Setup files
+setup.sh
