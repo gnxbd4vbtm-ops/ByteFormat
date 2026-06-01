@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "ByteFormat.Sample/1.0.0": {
+        "dependencies": {
+          "ByteFormat.Core": "1.0.0"
+        },
+        "runtime": {
+          "ByteFormat.Sample.dll": {}
+        }
+      },
+      "ByteFormat.Core/1.0.0": {
+        "runtime": {
+          "ByteFormat.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ByteFormat.Sample/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ByteFormat.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

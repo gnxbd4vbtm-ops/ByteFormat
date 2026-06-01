@@ -1,7 +1,0 @@
-[
-  {
-    (name: "Byte")
-    (age: 15)
-    (active: true)
-  }
-]
