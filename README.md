@@ -2,8 +2,8 @@
 
 ByteFormat is a lightweight C# library for working with a custom file format designed for simplicity and readability.
 It was created as an alternative to formats like JSON, with a focus on easy access and understanding, nested structures, and straightforward saving/loading.
-
 A VS Code extension is also planned to add syntax highlighting and file type support.
+
 ---
 ## Features
 - Simple key-based storage system

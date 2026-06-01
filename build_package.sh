@@ -1,43 +1,26 @@
-#!/usr/bin/env sh
-set -eu
+#!/usr/bin/env bash
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-cd "$SCRIPT_DIR"
+set -euo pipefail
 
-SAMPLE_PROJECT="./samples/ByteFormat.Sample/ByteFormat.Sample.csproj"
-if [ ! -f "$SAMPLE_PROJECT" ]; then
-  SAMPLE_PROJECT="./ByteFormat.Sample/ByteFormat.Sample.csproj"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+project_path="$script_dir/ByteFormat.Core/ByteFormat.Core.csproj"
+output_dir="$script_dir/ByteFormatPackage"
+
+if ! command -v dotnet >/dev/null 2>&1; then
+  echo "Error: dotnet is not installed or not on PATH." >&2
+  exit 1
 fi
 
-EXAMPLE_FILE="./samples/ByteFormat.Sample/example.byte"
-if [ ! -f "$EXAMPLE_FILE" ]; then
-  EXAMPLE_FILE="./ByteFormat.Sample/example.byte"
-fi
+mkdir -p "$output_dir"
 
-echo "Cleaning projects..."
-dotnet clean ./src/ByteFormat.Core/ByteFormat.Core.csproj
-dotnet clean "$SAMPLE_PROJECT"
+echo "Packing ByteFormat.Core from '$project_path' into '$output_dir'..."
 
-echo "Building library and sample in Release..."
-dotnet build ./src/ByteFormat.Core/ByteFormat.Core.csproj -c Release
-dotnet build "$SAMPLE_PROJECT" -c Release
+echo "Removing existing packages from '$output_dir'..."
 
-PACKAGE_DIR="ByteFormatPackage"
-PUBLISH_DIR="$PACKAGE_DIR/ByteFormat.Sample"
+rm -rf "$output_dir"/*
 
-echo "Preparing package directory: $PACKAGE_DIR"
-rm -rf "$PACKAGE_DIR"
-mkdir -p "$PUBLISH_DIR"
+echo "Existing packages removed."
 
-echo "Packing library..."
-dotnet pack ./src/ByteFormat.Core/ByteFormat.Core.csproj -c Release -o "$PACKAGE_DIR"
+dotnet pack "$project_path" -c Release -o "$output_dir"
 
-echo "Publishing sample app..."
-dotnet publish "$SAMPLE_PROJECT" -c Release -o "$PUBLISH_DIR"
-
-if [ -f "$EXAMPLE_FILE" ]; then
-  echo "Copying example .byte file into package..."
-  cp "$EXAMPLE_FILE" "$PACKAGE_DIR/"
-fi
-
-echo "Package creation complete. Output available in $PACKAGE_DIR"
+echo "Package build complete. Packages written to '$output_dir'."
