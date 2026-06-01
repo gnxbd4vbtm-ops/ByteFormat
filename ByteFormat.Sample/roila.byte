@@ -1,0 +1,24 @@
+roila {
+  age = 18
+  name = "\"Roila\""
+  hobbys = [
+    "\"being gay\"",
+    "\"being stupid\"",
+    "\"sucking kamo\""
+  ]
+  address {
+    city = "\"idk\""
+    country = "\"Spain\""
+  }
+  bio = """
+"""
+pvping since big 21
+LT1 on Mace
+LT2 On Sword
+
+*"Why oh why does he bleed us dry? He gets away with murder, gets away with murder!"*
+"""
+"""
+  gender = "\"Female\""
+  iq = -17
+}
