@@ -105,6 +105,40 @@ namespace ByteFormat.Core
             File.WriteAllText(Path, text);
         }
 
+        public void PrintAll()
+        {
+            if (_root == null) LoadFile();
+            if (_root == null) return;
+
+            foreach (var kv in _root.Values)
+            {
+                PrintNode(kv.Key, kv.Value);
+            }
+        }
+
+        private static void PrintNode(string path, Node node)
+        {
+            switch (node)
+            {
+                case ValueNode vn:
+                    Console.WriteLine($"{path} = {vn.Raw}");
+                    break;
+                case ArrayNode arr:
+                    for (var i = 0; i < arr.Items.Count; i++)
+                    {
+                        PrintNode($"{path}[{i}]", arr.Items[i]);
+                    }
+                    break;
+                case ObjectNode obj:
+                    foreach (var kv in obj.Values)
+                    {
+                        var childPath = string.IsNullOrEmpty(path) ? kv.Key : $"{path}.{kv.Key}";
+                        PrintNode(childPath, kv.Value);
+                    }
+                    break;
+            }
+        }
+
         private static string FormatValue<T>(T value)
         {
             if (value == null) return "\"\"";

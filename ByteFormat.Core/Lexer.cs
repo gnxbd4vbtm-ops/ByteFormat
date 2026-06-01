@@ -68,5 +68,14 @@ namespace ByteFormat.Core
         }
 
         private char Peek() => _i + 1 < _s.Length ? _s[_i + 1] : '\0';
+
+        // Peek the next token without advancing the lexer state
+        public Token PeekToken()
+        {
+            var saved = _i;
+            var tok = NextToken();
+            _i = saved;
+            return tok;
+        }
     }
 }

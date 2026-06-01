@@ -52,8 +52,9 @@ namespace ByteFormat.Core
 
         private bool PeekIsLBrace()
         {
-            // Very simple heuristic: assume patterns in inputs are consistent.
-            return true;
+            // Peek the next token to determine whether an identifier is followed by a '{'
+            var t = _lex.PeekToken();
+            return t.Kind == TokenKind.LBrace;
         }
 
         private ObjectNode ParseObjectBody()
