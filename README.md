@@ -16,6 +16,8 @@ dotnet run
 
 Examples in `samples/ByteFormat.Sample/Program.cs`.
 
+The library also supports saving values with `bf.Save(path, value)` or `bf.Save(ref variable, path)`.
+
 To build, pack, and copy the release artifacts into `ByteFormatPackage/`, run:
 
 ```bash

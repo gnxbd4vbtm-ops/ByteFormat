@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "byteformat": {
+      "iconPath": "./icons/icon.svg"
+    }
+  },
+  "fileExtensions": {
+    "byte": "byteformat"
+  }
+}

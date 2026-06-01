@@ -1,109 +1,49 @@
-# =========================
-# User Profile Example File
-# =========================
-
-user {
-  id = 1001
-  username = "byte_master"
-  display_name = "Byte"
-
-  age = 15
-  height = 1.72
-  weight = 58.4
-
-  active = true
-  role = enum:STUDENT
-
-  bio = """
-  This is a multiline string.
-  It can span multiple lines
-  without special escaping.
-  """
-
-  tags = ["coding", "math", "gaming"]
-
-  scores = [98, 87.5, 91, 100]
-
+demo {
+  intValue = 2026
+  stringValue = "\"hello from byte format\""
+  isActive = true
+  status = "\"enum:ACTIVE\""
+  notes = """
+"""
+This is a multiline string.
+It spans multiple lines.
+ByteFormat supports it.
+"""
+"""
+  tags = [
+    "\"coding\"",
+    "\"gameplay\"",
+    "\"learning\""
+  ]
+  scores = [
+    99,
+    87.5,
+    100
+  ]
+  profile {
+    username = "\"byte_master\""
+    age = 22
+    active = true
+  }
   settings {
-    theme = enum:DARK
-    language = "en"
-    notifications = true
-
+    theme = "\"enum:DARK\""
+    language = "\"en\""
+    notifications = false
     privacy {
       share_profile = false
       show_online_status = true
     }
   }
-
-  address home {
-    zip = "64283"
-    city = "Darmstadt"
-    country = "DE"
-  }
-
-  address school {
-    zip = "60311"
-    city = "Frankfurt"
-    country = "DE"
-  }
-
   friends = [
     {
-      id = 2001
-      name = "Alex"
-      status = enum:ONLINE
+      name = "\"Alex\""
+      status = "\"enum:ONLINE\""
       score = 88.2
     },
     {
-      id = 2002
-      name = "Mia"
-      status = enum:OFFLINE
-      score = 91.0
+      name = "\"Mia\""
+      status = "\"enum:OFFLINE\""
+      score = 91
     }
   ]
-}
-
-# =========================
-# Separate Data Packets
-# =========================
-
-address office {
-  street = "Tech Park 5"
-  zip = "10115"
-  city = "Berlin"
-  country = "DE"
-}
-
-address vacation_home {
-  city = "Munich"
-  zip = "80331"
-  country = "DE"
-}
-
-log_entry {
-  timestamp = "2026-06-01T12:00:00Z"
-  level = enum:INFO
-  message = "System started successfully"
-}
-
-log_entry {
-  timestamp = "2026-06-01T12:05:22Z"
-  level = enum:WARNING
-  message = "High memory usage detected"
-}
-
-log_entry {
-  timestamp = "2026-06-01T12:10:45Z"
-  level = enum:ERROR
-  message = "Connection timeout"
-}
-
-# =========================
-# Mixed standalone data
-# =========================
-
-config {
-  version = 1.0
-  debug = false
-  max_connections = 250
 }
