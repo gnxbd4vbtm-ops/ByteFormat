@@ -1,0 +1,13 @@
+{
+  "iconDefinitions": {
+    "byte": {
+      "iconPath": "./byte.svg"
+    }
+  },
+  "fileExtensions": {
+    "byte": "byte"
+  },
+  "languageIds": [
+    "byte"
+  ]
+}

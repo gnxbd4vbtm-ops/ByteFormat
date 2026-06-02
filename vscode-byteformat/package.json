@@ -1,0 +1,46 @@
+{
+  "name": "byteformat-vscode",
+  "displayName": "ByteFormat",
+  "description": "VS Code language support for ByteFormat .byte files, including syntax highlighting, completions, and a custom file icon.",
+  "version": "0.0.1",
+  "publisher": "gnxbd4vbtm-ops",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:byte"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "byte",
+        "aliases": [
+          "ByteFormat",
+          "byte"
+        ],
+        "extensions": [
+          ".byte"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "byte",
+        "scopeName": "source.byte",
+        "path": "./syntaxes/byte.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "byteformat-icons",
+        "label": "ByteFormat Icons",
+        "path": "./icons/byte-icon-theme.json"
+      }
+    ]
+  }
+}

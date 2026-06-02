@@ -1,0 +1,85 @@
+{
+  "scopeName": "source.byte",
+  "name": "ByteFormat",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#multiline-string" },
+    { "include": "#string" },
+    { "include": "#number" },
+    { "include": "#boolean" },
+    { "include": "#key" },
+    { "include": "#punctuation" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.byte",
+          "match": "#.+"
+        }
+      ]
+    },
+    "multiline-string": {
+      "name": "string.quoted.triple.byte",
+      "begin": "\"\"\"",
+      "end": "\"\"\"",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.byte" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.byte" }
+      },
+      "patterns": [
+        {
+          "name": "constant.character.escape.byte",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "string": {
+      "name": "string.quoted.double.byte",
+      "begin": "\"",
+      "end": "\"",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.byte" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.byte" }
+      },
+      "patterns": [
+        {
+          "name": "constant.character.escape.byte",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "number": {
+      "name": "constant.numeric.byte",
+      "match": "\\b-?\\d+(?:\\.\\d+)?\\b"
+    },
+    "boolean": {
+      "name": "constant.language.boolean.byte",
+      "match": "\\b(?:true|false)\\b"
+    },
+    "key": {
+      "name": "entity.name.key.byte",
+      "match": "^[ \t]*[A-Za-z_][A-Za-z0-9_\\-]*(?=\\s*=)"
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.byte",
+          "match": "="
+        },
+        {
+          "name": "punctuation.section.block.byte",
+          "match": "[{}]"
+        },
+        {
+          "name": "punctuation.section.array.byte",
+          "match": "[][]"
+        }
+      ]
+    }
+  }
+}
