@@ -1,4 +1,5 @@
 {
+  "extends": "vs-seti",
   "iconDefinitions": {
     "byte": {
       "iconPath": "./byte.svg"

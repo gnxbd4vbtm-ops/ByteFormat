@@ -8,7 +8,7 @@
     "vscode": "^1.80.0"
   },
   "categories": [
-    "Languages"
+    "Programming Languages"
   ],
   "activationEvents": [
     "onLanguage:byte"
