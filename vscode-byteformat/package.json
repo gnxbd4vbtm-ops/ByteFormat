@@ -2,8 +2,13 @@
   "name": "byteformat-vscode",
   "displayName": "ByteFormat",
   "description": "VS Code language support for ByteFormat .byte files, including syntax highlighting, completions, and a custom file icon.",
-  "version": "0.0.1",
+  "version": "3.0.0",
   "publisher": "gnxbd4vbtm-ops",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gnxbd4vbtm-ops/ByteFormat"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },

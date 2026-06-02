@@ -20,7 +20,7 @@
       ]
     },
     "multiline-string": {
-      "name": "string.quoted.triple.byte",
+      "name": "string.quoted.triple.json",
       "begin": "\"\"\"",
       "end": "\"\"\"",
       "beginCaptures": {
@@ -37,7 +37,7 @@
       ]
     },
     "string": {
-      "name": "string.quoted.double.byte",
+      "name": "string.quoted.double.json",
       "begin": "\"",
       "end": "\"",
       "beginCaptures": {
@@ -54,15 +54,15 @@
       ]
     },
     "number": {
-      "name": "constant.numeric.byte",
+      "name": "constant.numeric.json",
       "match": "\\b-?\\d+(?:\\.\\d+)?\\b"
     },
     "boolean": {
-      "name": "constant.language.boolean.byte",
+      "name": "constant.language.boolean.json",
       "match": "\\b(?:true|false)\\b"
     },
     "key": {
-      "name": "entity.name.key.byte",
+      "name": "support.type.property-name.json",
       "match": "^[ \t]*[A-Za-z_][A-Za-z0-9_\\-]*(?=\\s*=)"
     },
     "punctuation": {

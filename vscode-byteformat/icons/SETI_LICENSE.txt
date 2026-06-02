@@ -1,0 +1,2 @@
+Seti UI icons fetched from https://github.com/jesseweed/seti-ui.git
+Please review the upstream repository for exact license terms and attribution requirements.
