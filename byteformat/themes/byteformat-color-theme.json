@@ -1,0 +1,49 @@
+{
+  "name": "ByteFormat Syntax Colors",
+  "type": "dark",
+  "colors": {},
+  "tokenColors": [
+    {
+      "scope": [
+        "string.quoted.double.json",
+        "string.quoted.triple.json",
+        "string.quoted.double.byte",
+        "string.quoted.triple.byte",
+        "string.quoted.single.json",
+        "string.quoted.single.byte"
+      ],
+      "settings": {
+        "foreground": "#C0392B"
+      }
+    },
+    {
+      "scope": [
+        "support.type.property-name.json",
+        "variable.other",
+        "variable.other.property",
+        "variable"
+      ],
+      "settings": {
+        "foreground": "#4FC3F7"
+      }
+    },
+    {
+      "scope": [
+        "constant.numeric.json",
+        "constant.numeric"
+      ],
+      "settings": {
+        "foreground": "#F1C40F"
+      }
+    },
+    {
+      "scope": [
+        "constant.language.boolean.json",
+        "constant.language.boolean"
+      ],
+      "settings": {
+        "foreground": "#9B59B6"
+      }
+    }
+  ]
+}
