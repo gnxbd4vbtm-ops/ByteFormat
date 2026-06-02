@@ -83,7 +83,7 @@ file.Save("user.bio", bio);
 ⸻
 
 Building the Sample
-````bash
+```bash
 cd ByteFormat/samples/ByteFormat.Sample
 dotnet run
 ```
