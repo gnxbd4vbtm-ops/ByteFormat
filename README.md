@@ -77,8 +77,8 @@ file.Save("user1.hobbys[1]", "watching YouTube");
 file.Save("user1.hobbys[2]", "hanging out with friends");
 
 #Multi-line values
-
-file.Save("user.bio", "this is my bio");
+var bio = "this \n is \n a \n multiline \n bio ";
+file.Save("user.bio", bio);
 ```
 ⸻
 
