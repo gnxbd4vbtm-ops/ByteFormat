@@ -5,28 +5,35 @@ It was created as an alternative to formats like JSON, with a focus on easy acce
 A VS Code extension is also planned to add syntax highlighting and file type support.
 
 ---
+
 ## Features
 - Simple key-based storage system
 - Nested data support (e.g. `user.stats.level`)
 - Array-like indexing (`list[0]`)
 - Supports strings, numbers, and multi-line values
 - Easy to use API
+
 ---
+
 ## Project Structure
 
+```bash
 ByteFormat/
 ├── src/
 │   └── ByteFormat.Core/        # Core library
 ├── samples/
 │   └── ByteFormat.Sample/      # Example console app
 ├── ByteFormatPackage/          # NuGet output (.nupkg)
+```
 
 ---
 ## Installation
 
 just run 
 
-`dotnet add package ByteFormat.Core` 
+```bash
+dotnet add package ByteFormat.Core` 
+```
 
 in the root of your dotnet project
 after that just refrene the package 
@@ -41,7 +48,7 @@ git clone https://github.com/gnxbd4vbtm-ops/ByteFormat.git
 
 # Then add a project reference in your .csproj:
 
-<ProjectReference Include="src/ByteFormat.Core/ByteFormat.Core.csproj" />
+<ProjectReference Include="ByteFormat.Core/ByteFormat.Core.csproj" />
 ```
 ⸻
 
@@ -80,9 +87,11 @@ file.Save("user1.hobbys[2]", "hanging out with friends");
 var bio = "this \n is \n a \n multiline \n bio ";
 file.Save("user.bio", bio);
 ```
+
 ⸻
 
 Building the Sample
+
 ```bash
 cd ByteFormat/samples/ByteFormat.Sample
 dotnet run

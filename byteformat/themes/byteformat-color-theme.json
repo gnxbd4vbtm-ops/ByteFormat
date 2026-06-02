@@ -5,12 +5,8 @@
   "tokenColors": [
     {
       "scope": [
-        "string.quoted.double.json",
-        "string.quoted.triple.json",
         "string.quoted.double.byte",
-        "string.quoted.triple.byte",
-        "string.quoted.single.json",
-        "string.quoted.single.byte"
+        "string.quoted.triple.byte"
       ],
       "settings": {
         "foreground": "#C0392B"
@@ -18,10 +14,7 @@
     },
     {
       "scope": [
-        "support.type.property-name.json",
-        "variable.other",
-        "variable.other.property",
-        "variable"
+        "variable.other.property.byte"
       ],
       "settings": {
         "foreground": "#4FC3F7"
@@ -29,8 +22,7 @@
     },
     {
       "scope": [
-        "constant.numeric.json",
-        "constant.numeric"
+        "constant.numeric.byte"
       ],
       "settings": {
         "foreground": "#F1C40F"
@@ -38,11 +30,18 @@
     },
     {
       "scope": [
-        "constant.language.boolean.json",
-        "constant.language.boolean"
+        "constant.language.boolean.byte"
       ],
       "settings": {
         "foreground": "#9B59B6"
+      }
+    },
+    {
+      "scope": [
+        "comment.line.number-sign.byte"
+      ],
+      "settings": {
+        "foreground": "#7F8C8D"
       }
     }
   ]

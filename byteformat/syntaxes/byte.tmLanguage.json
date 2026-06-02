@@ -1,83 +1,68 @@
 {
   "scopeName": "source.byte",
-  "name": "ByteFormat",
   "patterns": [
     { "include": "#comments" },
-    { "include": "#multiline-string" },
-    { "include": "#string" },
-    { "include": "#number" },
-    { "include": "#boolean" },
-    { "include": "#key" },
-    { "include": "#punctuation" }
+    { "include": "#tripleStrings" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#booleans" },
+    { "include": "#keys" }
   ],
   "repository": {
     "comments": {
       "patterns": [
         {
           "name": "comment.line.number-sign.byte",
-          "match": "#.+"
+          "match": "#.*$"
         }
       ]
     },
-    "multiline-string": {
-      "name": "string.quoted.triple.json",
-      "begin": "\"\"\"",
-      "end": "\"\"\"",
-      "beginCaptures": {
-        "0": { "name": "punctuation.definition.string.begin.byte" }
-      },
-      "endCaptures": {
-        "0": { "name": "punctuation.definition.string.end.byte" }
-      },
+    "tripleStrings": {
       "patterns": [
         {
-          "name": "constant.character.escape.byte",
-          "match": "\\\\."
+          "name": "string.quoted.triple.byte",
+          "begin": "\"\"\"",
+          "end": "\"\"\"",
+          "patterns": []
         }
       ]
     },
-    "string": {
-      "name": "string.quoted.double.json",
-      "begin": "\"",
-      "end": "\"",
-      "beginCaptures": {
-        "0": { "name": "punctuation.definition.string.begin.byte" }
-      },
-      "endCaptures": {
-        "0": { "name": "punctuation.definition.string.end.byte" }
-      },
+    "strings": {
       "patterns": [
         {
-          "name": "constant.character.escape.byte",
-          "match": "\\\\."
+          "name": "string.quoted.double.byte",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.byte",
+              "match": "\\\\."
+            }
+          ]
         }
       ]
     },
-    "number": {
-      "name": "constant.numeric.json",
-      "match": "\\b-?\\d+(?:\\.\\d+)?\\b"
-    },
-    "boolean": {
-      "name": "constant.language.boolean.json",
-      "match": "\\b(?:true|false)\\b"
-    },
-    "key": {
-      "name": "support.type.property-name.json",
-      "match": "^[ \t]*[A-Za-z_][A-Za-z0-9_\\-]*(?=\\s*=)"
-    },
-    "punctuation": {
+    "numbers": {
       "patterns": [
         {
-          "name": "keyword.operator.assignment.byte",
-          "match": "="
-        },
+          "name": "constant.numeric.byte",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "booleans": {
+      "patterns": [
         {
-          "name": "punctuation.section.block.byte",
-          "match": "[{}]"
-        },
+          "name": "constant.language.boolean.byte",
+          "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
+    "keys": {
+      "patterns": [
         {
-          "name": "punctuation.section.array.byte",
-          "match": "[][]"
+          "name": "variable.other.property.byte",
+          "match": "\"[a-zA-Z0-9_]+\"(?=\\s*:)"
         }
       ]
     }

@@ -1,23 +1,16 @@
 {
   "name": "byteformat",
   "displayName": "Byte Format",
-  "description": "VS Code language support for ByteFormat .byte files, including syntax highlighting",
-  "version": "2.0.0",
+  "description": "VS Code language support for ByteFormat .byte files",
+  "version": "3.0.0",
   "publisher": "gnxbd4vbtm-ops",
   "license": "MIT",
-  "maintainers": [
-    "Byte (byte.blast on discord)"
-  ],
   "author": {
-    "name": "gnxbd4vbtm-ops (byte.blast on discord)",
+    "name": "gnxbd4vbtm-ops",
     "email": "gnxbd4vbtm@privaterelay.appleid.com",
     "url": "https://byteblast.online"
   },
   "icon": "icons/byte.png",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gnxbd4vbtm-ops/ByteFormat"
-  },
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -27,18 +20,12 @@
   "activationEvents": [
     "onLanguage:byte"
   ],
-  "main": "./extension.js",
   "contributes": {
     "languages": [
       {
         "id": "byte",
-        "aliases": [
-          "ByteFormat",
-          "byte"
-        ],
-        "extensions": [
-          ".byte"
-        ],
+        "aliases": ["ByteFormat", "byte"],
+        "extensions": [".byte"],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -48,8 +35,7 @@
         "scopeName": "source.byte",
         "path": "./syntaxes/byte.tmLanguage.json"
       }
-    ]
-    ,
+    ],
     "themes": [
       {
         "label": "ByteFormat Syntax Colors",
@@ -57,6 +43,5 @@
         "path": "./themes/byteformat-color-theme.json"
       }
     ]
-  
   }
 }
